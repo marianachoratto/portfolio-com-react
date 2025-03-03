@@ -2,4 +2,41 @@
   margin: 0 auto;
   text-align: center;
   box-sizing: border-box;
+  background-color: black;
+  color: white;
+}
+
+.Navbar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 400;
+  font-family: montserrat;
+}
+
+#text_navbar{
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+#text_navbar > a {
+  color: white;
+    text-decoration: none;
+}
+
+.translate-btn{
+  all: unset; /* Remove todos os estilos padrão do botão */
+  background-color: black;
+  padding: 8px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.translate-icon{
+  width: 28px;
+  height: 28px;
 }
