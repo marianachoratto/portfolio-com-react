@@ -2,14 +2,18 @@ import Card from "react-bootstrap/Card";
 import { FaLinkedin, FaGithub, FaWhatsapp } from "react-icons/fa6";
 import { SiGmail } from "react-icons/si";
 import { DivHome } from "./HomeStyled";
+import { changeLanguageFunction } from "../utils/changeLanguageFunction";
+import { useGlobalContext } from "../App";
 
 export default function Home() {
+  const props = useGlobalContext()
+
   return (
     <DivHome>
       <div className="homeText">
-        <div>
+        <div className="principal-text">
           <h1>
-            Olá! Me chamo Mariana Choratto e sou QA Engineer na Raro Labs.
+            {changeLanguageFunction(props.language, "tituloHome")}
           </h1>
           <p>
             No meu trabalho atuo com testes manuais e automatizados, garantindo

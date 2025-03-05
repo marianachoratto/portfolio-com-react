@@ -18,6 +18,12 @@ export const DivHome = styled.div`
     flex-direction: column;
     justify-content: center;
     max-width: 45%;
+    gap: 2rem;
+  }
+
+  .principal-text{
+    display: flex;
+    flex-direction: column;
   }
 
   .resume_get_in_touch_box {
