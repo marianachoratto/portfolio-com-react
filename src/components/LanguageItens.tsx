@@ -12,14 +12,22 @@ export function LanguageItens(props: {setLanguageOptions: React.Dispatch<React.S
       <FlagComponent className="fade-in">
         <Flags
           src={flag_of_Brazil}
-          alt="brasil"
+          alt="bandeira do brasil"
         //   VER DEPOIS
-          onClick={()=> props.setLanguageOptions(false)}
+          onClick={()=> {
+            props.setLanguageOptions(false)
+            lingua.setCurrentLanguage("br")
+          }}
+          decoding="async"
         />
         <Flags
           src={flag_of_eua}
-          alt="eua"
-          onClick={()=> props.setLanguageOptions(false)}
+          alt="bandeira dos eua"
+          onClick={()=> {
+            props.setLanguageOptions(false)
+            lingua.setCurrentLanguage("us")
+          }}
+          decoding="async"
         />
       </FlagComponent>
     </>
