@@ -2,34 +2,42 @@ import Card from "react-bootstrap/Card";
 import { FaLinkedin, FaGithub, FaWhatsapp } from "react-icons/fa6";
 import { SiGmail } from "react-icons/si";
 import { DivHome } from "./HomeStyled";
-import {useChangeLanguageFunction } from "../utils/changeLanguageFunction";
+import { useChangeLanguageFunction } from "../utils/changeLanguageFunction";
+import { FiExternalLink } from "react-icons/fi";
 
 export default function Home() {
+  const tituloHome = useChangeLanguageFunction("tituloHome1");
+
+  const partes = tituloHome.split("QA Engineer");
+  const parte2 = partes[1].split("Raro Labs");
+
+  console.log(partes);
 
   return (
-    <DivHome>
+    <DivHome id="divHome">
       <div className="homeText">
         <div className="principal-text">
           <h1>
-            {useChangeLanguageFunction("tituloHome")}
+            {partes[0]} <span className="sublinhado">QA Engineer</span>{" "}
+            {parte2[0]}
+            <span className="sublinhado">Raro Labs</span>
           </h1>
-          <p>
-            No meu trabalho atuo com testes manuais e automatizados, garantindo
-            a qualidade de aplicações com eficiência e precisão. Além disso,
-            tenho experiência em desenvolvimento front-end com React e back-end
-            com Node.js, o que me permite ter uma visão mais ampla do ciclo de
-            desenvolvimento de software.Seja bem-vindo ao meu portfólio!
-          </p>
+          <p>{useChangeLanguageFunction("paragrafoHome")}</p>
         </div>
         <div className="resume_get_in_touch_box">
           <Card
-          className="card border border-light bg-dark text-white border-white d-flex justify-content-center align-items-center"
-          style={{
-            width: "18rem",
-            height: "6rem",
-          }}
+            className="card border border-light bg-dark text-white border-white d-flex justify-content-center align-items-center pointer"
+            style={{
+              width: "18rem",
+              height: "6rem",
+            }}
           >
-            <Card.Link href="#" className="link-icon"><Card.Title>Currículo</Card.Title></Card.Link>
+            <Card.Link href="#" className="link-icon">
+              <Card.Title className="mb-0">
+                {useChangeLanguageFunction("curriculo")}
+                <FiExternalLink />
+              </Card.Title>
+            </Card.Link>
           </Card>
           <Card
             className="card border border-light bg-dark text-white border-white"
@@ -39,7 +47,7 @@ export default function Home() {
             }}
           >
             <div className="contact-icons">
-              <Card.Title>Entre em contato</Card.Title>
+              <Card.Title>{useChangeLanguageFunction("getInTouch")}</Card.Title>
               <Card.Link
                 href="https://www.linkedin.com/in/mariana-choratto-35b4821a4/"
                 className="link-icon"

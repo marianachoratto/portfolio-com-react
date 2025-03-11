@@ -9,6 +9,10 @@
   font-family: montserrat;
 }
 
+.pointer{
+  cursor: pointer;
+}
+
 .Navbar{
   display: flex;
   flex-direction: row;

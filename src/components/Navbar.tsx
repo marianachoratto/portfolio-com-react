@@ -2,6 +2,7 @@ import { useState } from "react";
 import { MdOutlineTranslate } from "react-icons/md";
 import { LanguageItens } from "./LanguageItens";
 import styled from "styled-components";
+import { useChangeLanguageFunction } from "../utils/changeLanguageFunction";
 
 export default function Navbar() {
   const [languageOptions, setLanguageOptions] = useState(false);
@@ -18,24 +19,26 @@ export default function Navbar() {
       <div className="Navbar">
         <div>Mariana Choratto</div>
         <div id="text_navbar">
-          <a href="" target="_self">
-            <p>Home</p>
+          <a href="#divHome" target="_self">
+            <p>{useChangeLanguageFunction("home")}</p>
           </a>
           <a href="" target="_self">
-            <p>Sobre Mim</p>
+            <p>{useChangeLanguageFunction("sobreMim")}</p>
           </a>
           <a href="" target="_self">
-            <p>Habilidades</p>
+            <p>{useChangeLanguageFunction("habilidades")}</p>
           </a>
           <a href="" target="_self">
-            <p>Projetos</p>
+            <p>{useChangeLanguageFunction("projetos")}</p>
           </a>
         </div>
-        <LanguageComponent >
+        <LanguageComponent>
           <button className="translate-btn" onClick={changeLanguage}>
             <MdOutlineTranslate className="translate-icon" />
           </button>
-          {languageOptions && <LanguageItens setLanguageOptions={setLanguageOptions} />}
+          {languageOptions && (
+            <LanguageItens setLanguageOptions={setLanguageOptions} />
+          )}
         </LanguageComponent>
       </div>
     </>
@@ -59,4 +62,4 @@ const LanguageComponent = styled.div`
   }
 
   /* Melhorias: procurar como usar fade-out */
-`
+`;

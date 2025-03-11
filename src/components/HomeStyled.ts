@@ -21,7 +21,7 @@ export const DivHome = styled.div`
     gap: 2rem;
   }
 
-  .principal-text{
+  .principal-text {
     display: flex;
     flex-direction: column;
   }
@@ -38,7 +38,7 @@ export const DivHome = styled.div`
     border-radius: 50px;
   }
 
-  .contact-icons{
+  .contact-icons {
     padding-top: 0.5rem;
   }
 
@@ -47,8 +47,12 @@ export const DivHome = styled.div`
     width: 35px;
   }
 
-  .link-icon{
+  .link-icon {
     color: white;
     text-decoration: none;
+  }
+
+  .sublinhado {
+    color:rgb(236, 154, 205);
   }
 `;
