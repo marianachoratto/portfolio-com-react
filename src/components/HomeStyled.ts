@@ -53,6 +53,14 @@ export const DivHome = styled.div`
   }
 
   .sublinhado {
-    color:rgb(236, 154, 205);
+    color: rgb(236, 154, 205);
+  }
+
+  .div_email_copiado {
+    background-color: white;
+    color: black;
+    max-width: 8rem;
+    position: relative;
+    left: 6rem;
   }
 `;

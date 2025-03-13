@@ -4,14 +4,22 @@ import { SiGmail } from "react-icons/si";
 import { DivHome } from "./HomeStyled";
 import { useChangeLanguageFunction } from "../utils/changeLanguageFunction";
 import { FiExternalLink } from "react-icons/fi";
+import { useState } from "react";
 
 export default function Home() {
   const tituloHome = useChangeLanguageFunction("tituloHome1");
-
   const partes = tituloHome.split("QA Engineer");
   const parte2 = partes[1].split("Raro Labs");
 
-  console.log(partes);
+  const [copied, setCopied] = useState(false);
+
+  function copyEmail(event: any) {
+    event.preventDefault();
+    setCopied(true);
+    navigator.clipboard.writeText("marianachoratto@gmail.com");
+
+    setTimeout(() => setCopied(false), 1500);
+  }
 
   return (
     <DivHome id="divHome">
@@ -34,8 +42,7 @@ export default function Home() {
           >
             <Card.Link href="#" className="link-icon">
               <Card.Title className="mb-0">
-                {useChangeLanguageFunction("curriculo")}
-                <FiExternalLink />
+                {useChangeLanguageFunction("curriculo")} <FiExternalLink />
               </Card.Title>
             </Card.Link>
           </Card>
@@ -62,12 +69,19 @@ export default function Home() {
               >
                 <FaGithub className="icon" />
               </Card.Link>
-              <Card.Link href="#" className="link-icon" target="_blank">
-                <SiGmail className="icon" />
+              <Card.Link href="#" className="link-icon" target="_self">
+                <SiGmail className="icon" onClick={copyEmail} />
               </Card.Link>
-              <Card.Link href="#" className="link-icon" target="_blank">
+              <Card.Link
+                href="https://wa.me/5571988725533"
+                className="link-icon"
+                target="_blank"
+              >
                 <FaWhatsapp className="icon" />
               </Card.Link>
+              <div className="div_email_copiado">
+                {copied ? "Email Copiado!" : ""}
+              </div>
             </div>
           </Card>
         </div>
