@@ -7,11 +7,10 @@ import { FiExternalLink } from "react-icons/fi";
 import { useState } from "react";
 
 export default function Home() {
+  const [copied, setCopied] = useState(false);
   const tituloHome = useChangeLanguageFunction("tituloHome1");
   const partes = tituloHome.split("QA Engineer");
   const parte2 = partes[1].split("Raro Labs");
-
-  const [copied, setCopied] = useState(false);
 
   function copyEmail(event: any) {
     event.preventDefault();

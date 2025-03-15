@@ -22,7 +22,7 @@ export default function Navbar() {
           <a href="#divHome" target="_self">
             <p>{useChangeLanguageFunction("home")}</p>
           </a>
-          <a href="" target="_self">
+          <a href="#sobreMim" target="_self">
             <p>{useChangeLanguageFunction("sobreMim")}</p>
           </a>
           <a href="" target="_self">
