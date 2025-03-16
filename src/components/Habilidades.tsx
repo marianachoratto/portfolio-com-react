@@ -1,25 +1,37 @@
 import styled from "styled-components";
-import flag_eua from "../assets/flag_eua.png";
 import { useChangeLanguageFunction } from "../utils/changeLanguageFunction";
-import { listTitles } from "../utils/ListOfHabilities";
+import { objHabilidades } from "../utils/ListOfHabilities";
+
+const ImgIcon = styled.img`
+  max-height: 130px;
+  max-width: 130px;
+`;
+
+const ContainerHabilidades = styled.div`
+  border: 2px solid white;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: rgba(255, 255, 255, 0.3) 0px 3px 8px;
+  min-width: 200px;
+`;
 
 export function Habilidades() {
-  const titulos = listTitles.map((titulo) => {
-    return <h1>{titulo}</h1>;
+  const cards = objHabilidades.map((card) => {
+    return (
+      <ContainerHabilidades className="card-body col-6 col-md-3">
+        <h5 className="card-title">{card.nome}</h5>
+        <ImgIcon src={card.imagem} />
+      </ContainerHabilidades>
+    );
   });
+
   return (
-    <>
+    <div className="container d-flex flex-column align-items-center">
       <h1>{useChangeLanguageFunction("habilidades")}</h1>
 
-      <ContainerHabilidades className="d-flex flex-wrap row-gap-5 column-gap-4 column-gap-sm-5 justify-content-center column-gap-lg-5 w-100">
-        <div className="d-flex flex-column-aic gap-2 col-4 col-sm-5 col-lg-3 hidden">
-          {titulos}
-
-          <img src={flag_eua} alt="" />
-        </div>
-      </ContainerHabilidades>
-    </>
+      <div className="row flex-wrap row-gap-5 column-gap-5 justify-content-center w-100">
+        {cards}
+      </div>
+    </div>
   );
 }
-
-const ContainerHabilidades = styled.div``;
