@@ -5,6 +5,10 @@ import { objHabilidades } from "../utils/ListOfHabilities";
 const ImgIcon = styled.img`
   max-height: 130px;
   max-width: 130px;
+
+  &.css {
+    margin-top: 15px;
+  }
 `;
 
 const ContainerHabilidades = styled.div`
@@ -17,10 +21,25 @@ const ContainerHabilidades = styled.div`
 
 export function Habilidades() {
   const cards = objHabilidades.map((card) => {
+    const addCss =
+      card.nome == "Cucumber" ||
+      card.nome == "Appium" ||
+      card.nome == "Git" ||
+      card.nome == "Django" ||
+      card.nome == "NodeJS" ||
+      card.nome == "React" ||
+      card.nome == "Github" ||
+      card.nome == "Robot Framework" ||
+      card.nome == "SQL" ||
+      card.nome == "Postman";
+
     return (
-      <ContainerHabilidades className="card-body col-6 col-md-3">
+      <ContainerHabilidades
+        className="card-body col-6 col-md-3"
+        key={card.nome}
+      >
         <h5 className="card-title">{card.nome}</h5>
-        <ImgIcon src={card.imagem} />
+        <ImgIcon src={card.imagem} className={addCss ? "css" : ""} />
       </ContainerHabilidades>
     );
   });

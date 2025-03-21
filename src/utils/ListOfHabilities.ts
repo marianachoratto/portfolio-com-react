@@ -3,16 +3,19 @@ import css from "../assets/habilitiesIcons/css.png";
 import js from "../assets/habilitiesIcons/javascript.png";
 import typescript from "../assets/habilitiesIcons/typescript.png";
 import python from "../assets/habilitiesIcons/python.png";
-import cypress from "../assets/habilitiesIcons/cypress.svg";
+import cypress from "../assets/habilitiesIcons/Cypress.png";
 import cucumber from "../assets/habilitiesIcons/cucumber.svg";
 import appium from "../assets/habilitiesIcons/appium.svg";
+import robot from "../assets/habilitiesIcons/robot-framework-seeklogo.svg";
 import git from "../assets/habilitiesIcons/git.png";
 import github from "../assets/habilitiesIcons/github.png";
 import react from "../assets/habilitiesIcons/react.png";
 import bootstrap from "../assets/habilitiesIcons/bootstrap.png";
 import django from "../assets/habilitiesIcons/django.svg";
 import djangoRest from "../assets/habilitiesIcons/Django_REST.svg";
+import sql from "../assets/habilitiesIcons/Azure_SQL_Database.svg";
 import node from "../assets/habilitiesIcons/nodejs.png";
+import postman from "../assets/habilitiesIcons/postman.svg";
 
 export const objHabilidades = [
   {
@@ -44,8 +47,16 @@ export const objHabilidades = [
     imagem: cucumber,
   },
   {
+    nome: "Postman",
+    imagem: postman,
+  },
+  {
     nome: "Appium",
     imagem: appium,
+  },
+  {
+    nome: "Robot Framework",
+    imagem: robot,
   },
   {
     nome: "Git",
@@ -70,6 +81,10 @@ export const objHabilidades = [
   {
     nome: "Django Rest Framework",
     imagem: djangoRest,
+  },
+  {
+    nome: "SQL",
+    imagem: sql,
   },
   {
     nome: "NodeJS",
