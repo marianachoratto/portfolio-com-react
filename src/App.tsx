@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import SobreMim from "./components/SobreMim";
 import { createContext, useContext, useState } from "react";
 import { Habilidades } from "./components/Habilidades";
+import { Projetos } from "./components/Projetos";
 
 export const context = createContext<any>(null);
 export const useGlobalContext = () => useContext(context);
@@ -25,6 +26,7 @@ function App() {
         <Home />
         <SobreMim />
         <Habilidades></Habilidades>
+        <Projetos />
       </context.Provider>
     </>
   );

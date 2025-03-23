@@ -45,7 +45,7 @@ export function Habilidades() {
   });
 
   return (
-    <div className="container d-flex flex-column align-items-center">
+    <div className="container d-flex flex-column align-items-center mb-5">
       <h1>{useChangeLanguageFunction("habilidades")}</h1>
 
       <div className="row flex-wrap row-gap-5 column-gap-5 justify-content-center w-100">
