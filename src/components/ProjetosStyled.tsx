@@ -12,6 +12,7 @@ export const DivProjeto = styled.div`
   padding: 16px;
   box-shadow: rgba(255, 255, 255, 0.3) 0px 3px 8px;
   max-width: 22rem;
+  /* max-height: 30rem; */
 `;
 
 export const TituloHabilidade = styled.p`
@@ -21,4 +22,10 @@ export const TituloHabilidade = styled.p`
   color: #e9a4ce;
   font-size: 0.75rem;
   padding: 0.3rem;
+`;
+
+export const Button = styled.button`
+  height: 44px;
+  width: 101px;
+  font-size: 0.9rem;
 `;
