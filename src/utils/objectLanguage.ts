@@ -16,6 +16,8 @@ export const objectLanguage = {
       "Atualmente, estou concluindo minha graduação em Análise e Desenvolvimento de Sistemas e construindo minha carreira como QA. Minha experiência com testes manuais e automatizados me permite garantir a qualidade de software com precisão, enquanto sigo aprofundando meus conhecimentos em desenvolvimento. Estou sempre aberta a novos desafios e oportunidades para expandir minha atuação no mundo da tecnologia.",
     sobreMimTitulo: "Sobre Mim",
     projetosTitulo: "Projetos",
+    verMais: "Ver mais",
+    acesse: "Acesse",
   },
   us: {
     home: "Home",
@@ -34,5 +36,7 @@ export const objectLanguage = {
       "Currently, I am finishing my degree in Systems Analysis and Development and building my career as a QA. My experience with manual and automated testing allows me to ensure software quality with precision, while I continue deepening my knowledge in development. I am always open to new challenges and opportunities to expand my role in the tech world.",
     sobreMimTitulo: "About Me",
     projetosTitulo: "Projects",
+    verMais: "Read More",
+    acesse: "Access",
   },
 };

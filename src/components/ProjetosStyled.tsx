@@ -4,6 +4,8 @@ export const CardsProjetoPai = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  flex-wrap: wrap;
+  row-gap: 3rem;
 `;
 
 export const DivProjeto = styled.div`
@@ -11,8 +13,7 @@ export const DivProjeto = styled.div`
   border-radius: 6px;
   padding: 16px;
   box-shadow: rgba(255, 255, 255, 0.3) 0px 3px 8px;
-  max-width: 22rem;
-  /* max-height: 30rem; */
+  max-width: 30rem;
 `;
 
 export const TituloHabilidade = styled.p`
@@ -27,5 +28,5 @@ export const TituloHabilidade = styled.p`
 export const Button = styled.button`
   height: 44px;
   width: 101px;
-  font-size: 0.9rem;
+  font-size: 0.86rem;
 `;
