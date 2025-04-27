@@ -16,6 +16,7 @@ import { listaProjetos } from "../utils/listaProjetos";
 
 export function Projetos() {
   const [buttonVerMais, setbuttonVerMais] = useState(false);
+  const changeLanguageFunction = useChangeLanguageFunction;
 
   return (
     <div>
@@ -37,7 +38,6 @@ export function Projetos() {
               </div>
               <p>
                 {descricaoProjeto.split(" ").slice(0, 15).join(" ")}
-
                 {"..."}
               </p>
               <div className="d-flex justify-content-center gap-3">
@@ -45,17 +45,14 @@ export function Projetos() {
                   <Button
                     type="button"
                     className="btn btn-light"
-                    onClick={() => {
-                      console.log("oi", buttonVerMais);
-                      return setbuttonVerMais(!buttonVerMais);
-                    }}
+                    onClick={() => setbuttonVerMais(!buttonVerMais)}
                   >
-                    {useChangeLanguageFunction("verMais")}
+                    {changeLanguageFunction("verMais")}
                   </Button>
                 </a>
                 <a href={card.linkAcesse}>
                   <Button type="button" className="btn btn-light">
-                    {useChangeLanguageFunction("acesse")} <FiExternalLink />
+                    {changeLanguageFunction("acesse")} <FiExternalLink />
                   </Button>
                 </a>
                 <a href={card.linkGithub}>
